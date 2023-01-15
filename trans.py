@@ -1,6 +1,6 @@
 from enum import Enum
-import re
 from typing import Optional
+import re
 
 RE_LOJ_URL = re.compile(r'.*loj\.ac/p/(\d+)')
 RE_UOJ_URL = re.compile(r'.*uoj\.ac/problem/(\d+)')
