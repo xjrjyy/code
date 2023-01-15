@@ -123,5 +123,7 @@ def test():
         assert(filename == url_filename)
 
 if __name__ == '__main__':
-    url = input().strip()
-    print(url_to_filename(url))
+    print('Input Problem Url(s):')
+    while True:
+        url = input().strip()
+        print(url_to_filename(url))
