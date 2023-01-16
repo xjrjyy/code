@@ -27,8 +27,9 @@
   - 例：[at_arc001_a](https://atcoder.jp/contests/arc001/tasks/arc001_1)。
   - 例：[at_arc058_a](https://atcoder.jp/contests/arc058/tasks/arc058_a)。
     - 实际显示与 URL 内容不符时，**以 URL 为准**。
-- 赛题：`CONTEST_(DAY)PID`。 <!--TODO：是否加上题目名称。-->
-  - 例：`ioi2022_1a`。
+- 赛题：`CONTEST_(DAY)(PID_)NAME`。 <!--TODO：是否加上题目名称。-->
+  - 尽量加上 `PID`。
+  - 例：`ioi2022_1a_digital_circuit`。
 
 <!--TODO：校内模拟赛。-->
 
@@ -45,13 +46,17 @@
 - 未通过的代码存放在 `_unac` 文件夹。
   - 例：`_unac/loj_p1.cpp`。
 - 比赛代码存放在 `_contest/CONTEST` 文件夹。
-  - 例：`_contest/ioi2022/ioi2022_1a.cpp`。 <!--TODO：是否加上题目名称。-->
+  - 例：`_contest/ioi2022/ioi2022_1a_digital_circuit.cpp`。
 - 线上非官方比赛代码存放在 `_online_contest` 文件夹。
   - [Codeforces](https://codeforces.com/) 题目存放在 `_online_contest/codeforces/CONTEST` 中。
     - 例：`_online_contest/codeforces/1/cf_1_a.cpp`。
     - 例：`_online_contest/codeforces/gym_100001/cf_gym_100001_a.cpp`。
   - [AtCoder](https://atcoder.jp/) 题目存放在 `_online_contest/atcoder/CONTEST` 中。
     - 例：`_online_contest/atcoder/arc001/at_arc001_a.cpp`。
+
+[OI 赛事与赛制](https://oi-wiki.org/contest/oi/)。
+
+常见比赛见 [Category](http://qoj.ac/category/)。
 
 ## 代码头
 

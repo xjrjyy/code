@@ -1,4 +1,4 @@
-/* ioi2022_1b.cpp */
+/* ioi2022_1b_rarest_insects.cpp */
 #include <bits/stdc++.h>
 
 #define fo(x) freopen(#x".in", "r", stdin); freopen(#x".out", "w", stdout);
