@@ -1,6 +1,15 @@
+'''
+URL 转文件名，支持从剪贴板读取。
+'''
+
+READ_FROM_CLIP = True
+
+# TODO: filename to url
+
 from enum import Enum
 from typing import Optional
 import re
+import pyperclip
 
 RE_LOJ_URL = re.compile(r'.*loj\.ac/p/(\d+)')
 RE_UOJ_URL = re.compile(r'.*uoj\.ac/problem/(\d+)')
@@ -107,6 +116,7 @@ def url_to_filename(url: str):
     return parse_url_info(url).to_filename()
 
 def test():
+    # TODO: failed tests
     urls = {
         'https://loj.ac/p/1': 'loj_p1',
         'https://uoj.ac/problem/1': 'uoj_p1',
@@ -123,6 +133,11 @@ def test():
         assert(filename == url_filename)
 
 if __name__ == '__main__':
+    if READ_FROM_CLIP:
+        url = pyperclip.paste().strip()
+        filename = url_to_filename(url)
+        if filename: print(f'From Clip: {filename}')
+
     print('Input Problem Url(s):')
     while True:
         url = input().strip()

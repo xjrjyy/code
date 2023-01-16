@@ -2,7 +2,9 @@
 
 ## 命名规则
 
-仅使用小写字母、数字与下划线。
+`trans.py` 是 URL 转文件名工具。需要先 `pip install -r requirements.txt`。
+
+文件名仅使用小写字母、数字与下划线。
 
 一些记号：
 
