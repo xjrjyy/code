@@ -18,16 +18,22 @@
   - 例：[luogu_p1001](https://www.luogu.com.cn/problem/P1001)。
 - [Codeforces](https://codeforces.com/)：`cf_CONTEST_ID`（仅限主题库）、`cf_gymCONTEST_ID`（gym）。
   - 例：[cf_1_a](https://codeforces.com/problemset/problem/1/A)。
-    - 不使用比赛链接。
+    - 不使用赛时链接。
   - 例：[cf_gym_100001_a](https://codeforces.com/gym/100001/problem/A)。
     - 对于无在线题面的比赛，手动添加 `/problem/PID`。
 - [AtCoder](https://atcoder.jp/)：`at_CONTEST_ID`（仅限 ABC、ARC 与 AGC）。 <!--TODO：其他类型比赛。-->
   - 例：[at_arc001_a](https://atcoder.jp/contests/arc001/tasks/arc001_1)。
   - 例：[at_arc058_a](https://atcoder.jp/contests/arc058/tasks/arc058_a)。
     - 实际显示与 URL 内容不符时，**以 URL 为准**。
+- 赛题：`CONTEST_(DAY)PID`。 <!--TODO：是否加上题目名称。-->
+  - 例：`ioi2022_1a`。
 
-- 本质相同的代码仅存放一份，同一题的不同实现**加后缀区分**。
+<!--TODO：校内模拟赛。-->
+
+- 本质相同的代码仅存放一份，同一题的不同实现**加后缀区分**（仅**模板题**与**相差很大的解法**）。
   - 例：[loj_p104_fhq_treap](https://loj.ac/p/104) 与 [loj_p104_wblt](https://loj.ac/p/104)。
+
+如果存在重题，需要放置多份代码。 <!--TODO：校内模拟赛。-->
 
 ## 文件存放
 
@@ -36,13 +42,13 @@
   - 例：`_ac/loj_p1.cpp`。
 - 未通过的代码存放在 `_unac` 文件夹。
   - 例：`_unac/loj_p1.cpp`。
-- 比赛代码存放在 `_contest` 文件夹。
-  - 例：`_contest/ioi2022/day1/a.cpp`。 <!--TODO：是否加上题目名称。-->
+- 比赛代码存放在 `_contest/CONTEST` 文件夹。
+  - 例：`_contest/ioi2022/ioi2022_1a.cpp`。 <!--TODO：是否加上题目名称。-->
 - 线上非官方比赛代码存放在 `_online_contest` 文件夹。
-  - [Codeforces](https://codeforces.com/) 题目存放在 `_online_contest/codeforces` 中。
+  - [Codeforces](https://codeforces.com/) 题目存放在 `_online_contest/codeforces/CONTEST` 中。
     - 例：`_online_contest/codeforces/1/cf_1_a.cpp`。
     - 例：`_online_contest/codeforces/gym_100001/cf_gym_100001_a.cpp`。
-  - [AtCoder](https://atcoder.jp/) 题目存放在 `_online_contest/atcoder` 中。
+  - [AtCoder](https://atcoder.jp/) 题目存放在 `_online_contest/atcoder/CONTEST` 中。
     - 例：`_online_contest/atcoder/arc001/at_arc001_a.cpp`。
 
 ## 代码头
