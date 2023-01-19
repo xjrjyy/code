@@ -28,8 +28,9 @@
   - 例：[at_arc058_a](https://atcoder.jp/contests/arc058/tasks/arc058_a)。
     - 实际显示与 URL 内容不符时，**以 URL 为准**。
 - 赛题：`CONTEST_(DAY)(PID_)NAME`。 <!--TODO：是否加上题目名称。-->
-  - 尽量加上 `PID`。
+  - 除非找不到原题面，否则需要加上 `PID`。
   - 例：`ioi2022_1a_digital_circuit`。
+  - 例：`ceoi2016_kangaroo`。
 
 <!--TODO：校内模拟赛。-->
 
@@ -82,4 +83,5 @@ int main() {
     // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
     return 0;
 }
+
 ```

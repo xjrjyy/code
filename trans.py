@@ -1,5 +1,7 @@
 '''
 URL 转文件名，支持从剪贴板读取。
+
+TODO: Luogu AT RemoteJudge
 '''
 
 READ_FROM_CLIP = True
@@ -13,12 +15,13 @@ import pyperclip
 
 RE_LOJ_URL = re.compile(r'.*loj\.ac/p/(\d+)')
 RE_UOJ_URL = re.compile(r'.*uoj\.ac/problem/(\d+)')
-RE_LUOGU_URL = re.compile(r'.*luogu\.com\.cn/problem/([a-zA-Z]+\d+)')
+RE_LUOGU_URL = re.compile(r'.*luogu\.com\.cn/problem/([a-zA-Z]{1,3}[0-9a-zA-Z_]+)')
 RE_CF_URL = re.compile(r'.*codeforces\.com/problemset/problem/(\d+)/([a-zA-Z])')
 RE_CF_GYM_URL = re.compile(r'.*codeforces\.com/gym/(\d+)/problem/([a-zA-Z])')
 RE_AT_URL = re.compile(r'.*atcoder\.jp/contests/a[brg]c\d{3}/tasks/(a[brg]c\d{3})_([1-9a-zA-Z])')
 
 RE_LUOGU_P_PROBLEM = re.compile(r'P(\d{4,})')
+RE_LUOGU_REMOTE_CF_PROBLEM = re.compile(r'CF(\d+)([a-zA-Z])')
 
 class OJType(Enum):
     Loj = 'loj'
@@ -70,6 +73,9 @@ def parse_uoj_pid(pid: str) -> Optional[ProblemInfo]:
 def parse_luogu_pid(pid: str) -> Optional[ProblemInfo]:
     if RE_LUOGU_P_PROBLEM.match(pid):
         return ProblemInfo(OJType.Luogu, pid)
+    if RE_LUOGU_REMOTE_CF_PROBLEM.match(pid):
+        contest, pid = RE_LUOGU_REMOTE_CF_PROBLEM.match(pid).groups()
+        return parse_cf_pid(contest, pid)
     return None
 
 def parse_cf_pid(contest: str, pid: str) -> Optional[ProblemInfo]:
@@ -113,7 +119,9 @@ def parse_url_info(url: str) -> Optional[ProblemInfo]:
     return None
 
 def url_to_filename(url: str):
-    return parse_url_info(url).to_filename()
+    info = parse_url_info(url)
+    if not info: return 'Unknown'
+    return info.to_filename()
 
 def test():
     # TODO: failed tests
