@@ -61,6 +61,8 @@
 
 ## 代码头
 
+所有代码均不保留文件输入输出。
+
 ```cpp
 /* FILENAME */
 #include <bits/stdc++.h>
