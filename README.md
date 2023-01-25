@@ -27,8 +27,9 @@
   - 例：[at_arc001_a](https://atcoder.jp/contests/arc001/tasks/arc001_1)。
   - 例：[at_arc058_a](https://atcoder.jp/contests/arc058/tasks/arc058_a)。
     - 实际显示与 URL 内容不符时，**以 URL 为准**。
-- 赛题：`CONTEST_(DAY)(PID_)NAME`。 <!--TODO：是否加上题目名称。-->
+- 赛题：`CONTEST_(DAY)(PID_)NAME`。
   - 除非找不到原题面，否则需要加上 `PID`。
+  - 若题目年代久远，找不到英文名称，则直接根据中文名称翻译，在代码内注明。
   - 例：`ioi2022_1a_digital_circuit`。
   - 例：`ceoi2016_kangaroo`。
 
