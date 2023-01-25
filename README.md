@@ -48,8 +48,10 @@
   - 例：`_ac/loj_p1.cpp`。
 - 未通过的代码存放在 `_unac` 文件夹。
   - 例：`_unac/loj_p1.cpp`。
-- 比赛代码存放在 `_contest/CONTEST` 文件夹。
-  - 例：`_contest/ioi2022/ioi2022_1a_digital_circuit.cpp`。
+- 比赛代码存放在 `_contest/CONTEST/YEAR` 文件夹。
+  - 例：`_contest/ioi/2022/ioi2022_1a_digital_circuit.cpp`。
+  - 省选（Provincial Team Selection）题目存放在 `_contest/pts/CONTEST/YEAR` 文件夹。
+    - 例：`_contest/pts/fjoi/2022/fjoi2022_1a_range.cpp`。
 - 线上非官方比赛代码存放在 `_online_contest` 文件夹。
   - [Codeforces](https://codeforces.com/) 题目存放在 `_online_contest/codeforces/CONTEST` 中。
     - 例：`_online_contest/codeforces/1/cf_1_a.cpp`。
