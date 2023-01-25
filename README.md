@@ -12,9 +12,9 @@
 - `CONTEST`：比赛名称；
 - `PID`：题目（在题库或比赛中的）编号（如 `1`、`a`）。
 
-- [LOJ](https://loj.ac/)：`loj_pID`。
+- [Loj](https://loj.ac/)：`loj_pID`。
   - 例：[loj_p1](https://loj.ac/p/1)。
-- [UOJ](https://uoj.ac/)：`uoj_pID`。
+- [Uoj](https://uoj.ac/)：`uoj_pID`。
   - 例：[uoj_p1](https://uoj.ac/problem/1)。
 - [洛谷](https://www.luogu.com.cn/)：`luogu_ID`（仅限主题库）。
   - 例：[luogu_p1001](https://www.luogu.com.cn/problem/P1001)。
