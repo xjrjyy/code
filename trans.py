@@ -22,6 +22,7 @@ RE_AT_URL = re.compile(r'.*atcoder\.jp/contests/a[brg]c\d{3}/tasks/(a[brg]c\d{3}
 
 RE_LUOGU_P_PROBLEM = re.compile(r'P(\d{4,})')
 RE_LUOGU_REMOTE_CF_PROBLEM = re.compile(r'CF(\d+)([a-zA-Z])')
+RE_LUOGU_REMOTE_AT_PROBLEM = re.compile(r'AT_(a[brg]c\d{3})_([1-9a-zA-Z])')
 
 class OJType(Enum):
     Loj = 'loj'
@@ -49,7 +50,7 @@ class ProblemInfo:
         if self.name: msg += f'({self.name})'
         return msg
     
-    def to_filename(self) -> str:
+    def to_filename(self) -> Optional[str]:
         if self.oj == OJType.Loj:
             return f'{str(self.oj)}_p{self.id}'
         if self.oj == OJType.Uoj:
@@ -62,7 +63,7 @@ class ProblemInfo:
             return f'{str(self.oj)}_{self.contest}_{self.id}'
         if self.oj == OJType.Atcoder:
             return f'{str(self.oj)}_{self.contest}_{self.id}'
-        return 'Unknown'
+        return None
 
 def parse_loj_pid(pid: str) -> Optional[ProblemInfo]:
     return ProblemInfo(OJType.Loj, pid)
@@ -76,6 +77,9 @@ def parse_luogu_pid(pid: str) -> Optional[ProblemInfo]:
     if RE_LUOGU_REMOTE_CF_PROBLEM.match(pid):
         contest, pid = RE_LUOGU_REMOTE_CF_PROBLEM.match(pid).groups()
         return parse_cf_pid(contest, pid)
+    if RE_LUOGU_REMOTE_AT_PROBLEM.match(pid):
+        contest, pid = RE_LUOGU_REMOTE_AT_PROBLEM.match(pid).groups()
+        return parse_at_pid(contest, pid)
     return None
 
 def parse_cf_pid(contest: str, pid: str) -> Optional[ProblemInfo]:
@@ -100,7 +104,7 @@ def parse_url_info(url: str) -> Optional[ProblemInfo]:
     if RE_UOJ_URL.match(url):
         pid, = RE_UOJ_URL.match(url).groups()
         return parse_uoj_pid(pid)
-    # 洛谷
+    # Luogu
     if RE_LUOGU_URL.match(url):
         pid, = RE_LUOGU_URL.match(url).groups()
         return parse_luogu_pid(pid)
@@ -118,9 +122,9 @@ def parse_url_info(url: str) -> Optional[ProblemInfo]:
         return parse_at_pid(contest, pid)
     return None
 
-def url_to_filename(url: str):
+def url_to_filename(url: str) -> Optional[str]:
     info = parse_url_info(url)
-    if not info: return 'Unknown'
+    if not info: return None
     return info.to_filename()
 
 def test():
@@ -133,6 +137,9 @@ def test():
         'https://codeforces.com/gym/100001/problem/A': 'cf_gym_100001_a',
         'https://atcoder.jp/contests/arc001/tasks/arc001_1': 'at_arc001_a',
         'https://atcoder.jp/contests/arc058/tasks/arc058_a': 'at_arc058_a',
+        # Luogu RemoteJudge
+        'https://www.luogu.com.cn/problem/CF1A': 'cf_1_a',
+        'https://www.luogu.com.cn/problem/AT_arc058_a': 'at_arc058_a',
     }
     for (url, filename) in urls.items():
         info = parse_url_info(url)
