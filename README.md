@@ -61,6 +61,9 @@
     - 例：`_online_contest/codeforces/gym_100001/cf_gym_100001_a.cpp`。
   - [AtCoder](https://atcoder.jp/) 题目存放在 `_online_contest/atcoder/CONTEST` 中。
     - 例：`_online_contest/atcoder/arc001/at_arc001_a.cpp`。
+- 数据生成器（对拍用）代码存放在 `_gen` 文件夹。
+  - 添加 `gen.cpp` 后缀。
+  - 例：`_gen/loj_p1.gen.cpp`。
 
 [OI 赛事与赛制](https://oi-wiki.org/contest/oi/)。
 
