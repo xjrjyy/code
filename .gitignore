@@ -4,3 +4,6 @@
 *.in
 *.out
 *.ans
+
+/chk/*
+!/chk/main.cpp
