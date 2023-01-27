@@ -25,7 +25,7 @@ string error_path(int) { return ""; }
 
 void compile(const string &s) {
     if (system(("g++ " + s + ".cpp -o " + s + ".exe -O2").c_str())) {
-        cerr << s << ".cpp Compile Error!\n";
+        cout << s << ".cpp Compile Error!\n";
         exit(1);
     }
 }
@@ -43,7 +43,7 @@ bool cmp(const string &out, const string &ans) {
     char buffer1[kBufferSize], buffer2[kBufferSize];
     ifstream file1(out, ios::binary), file2(ans, ios::binary);
     if (!file1 || !file2) {
-        cerr << "Error opening file." << endl;
+        cout << "Error opening file." << endl;
         return false;
     }
 
@@ -134,6 +134,7 @@ int main() {
         }
         cnt += kNumThreads;
     }
+    cout << "Error!" << endl;
     // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
     return 0;
 }
