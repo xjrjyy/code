@@ -4,6 +4,8 @@
 *.in
 *.out
 *.ans
+*.bin
+/_unac
 
 /chk/*
 !/chk/main.cpp
