@@ -35,6 +35,8 @@
   - 例：`ceoi2016_kangaroo`。
   - 例：`coci2022_1a_desni_klik`。
 
+- 由于集训队互测不知道怎么翻译，暂时定为 CCTMT（China Candidate Team Mutual Training）。
+
 <!--TODO: 省选题。-->
 <!--TODO：校内模拟赛。-->
 <!--TODO：语言。-->
