@@ -30,12 +30,14 @@
 - 赛题：`CONTEST_(DAY)(PID_)NAME`。
   - 除非找不到原题面，否则需要加上 `PID`。
   - 若题目年代久远，找不到英文名称，则直接根据中文名称翻译，在代码内注明。
+  - 横跨多年的题目（如 [COCI](https://hsin.hr/coci/)），以开始年份为准。
   - 例：`ioi2022_1a_digital_circuit`。
   - 例：`ceoi2016_kangaroo`。
+  - 例：`coci2022_1a_desni_klik`。
 
 <!--TODO: 省选题。-->
-
 <!--TODO：校内模拟赛。-->
+<!--TODO：语言。-->
 
 - 本质相同的代码仅存放一份，同一题的不同实现**加后缀区分**（仅**模板题**与**相差很大的解法**）。
   - 例：[loj_p104_fhq_treap](https://loj.ac/p/104) 与 [loj_p104_wblt](https://loj.ac/p/104)。
