@@ -27,6 +27,23 @@ int main() {
 
 ```
 
+## 数据结构
+
+### 并查集
+
+```cpp
+struct DSU {
+    int n; vec<int> fa, sz;
+    DSU(int n_) : n(n_), fa(n), sz(n, 1) { iota(all(fa), 0); }
+    int fd(int x) { return x == fa[x] ? x : fa[x] = fd(fa[x]); }
+    void mg(int u, int v) {
+        if ((u = fd(u)) == (v = fd(v))) return;
+        if (sz[u] < sz[v]) swap(u, v);
+        fa[v] = u, sz[u] += sz[v];
+    }
+};
+```
+
 ## 图论
 
 ### 网络流
