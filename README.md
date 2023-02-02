@@ -37,6 +37,11 @@
 
 - 由于集训队互测不知道怎么翻译，暂时定为 CCTMT（China Candidate Team Mutual Training）。
 
+一些细节：
+
+- NOI Online 在 2020 有三场比赛。
+  - 命名为 `noio2020_1`、`noio2020_2` 与 `noio2020_3`。
+
 <!--TODO: 省选题。-->
 <!--TODO：校内模拟赛。-->
 <!--TODO：语言。-->
