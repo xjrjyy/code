@@ -2,11 +2,11 @@
 #include <bits/stdc++.h>
 
 #define fo(x) freopen(#x".in", "R", stdin); freopen(#x".out", "w", stdout);
-#define rep(i, L, R) for (int i = L, rep##i = R; i <= rep##i; ++i)
-#define per(i, R, L) for (int i = R, per##i = L; i >= per##i; --i)
+#define rep(i, L, R) for (int i = (l), rep##i = (r); i <= rep##i; ++i)
+#define per(i, R, L) for (int i = (r), per##i = (l); i >= per##i; --i)
 #define r0p(i, R) rep (i, 0, (R) - 1)
 #define p0r(i, L) per (i, (L) - 1, 0)
-#define each(x, s) for (auto &x : s)
+#define each(x, s) for (auto &x : (s))
 #define all(s) (s).begin(), (s).end()
 #define dbg(x) (cerr << "Line#" << __LINE__ << " " << #x << "=" << (x) << endl)
 
