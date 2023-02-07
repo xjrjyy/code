@@ -13,15 +13,16 @@ from typing import Optional
 import re
 import pyperclip
 
+RE_CF_PID = r'([a-zA-Z][1-9]?)'
 RE_LOJ_URL = re.compile(r'.*loj\.ac/p/(\d+)')
 RE_UOJ_URL = re.compile(r'.*uoj\.ac/problem/(\d+)')
 RE_LUOGU_URL = re.compile(r'.*luogu\.com\.cn/problem/([a-zA-Z]{1,3}[0-9a-zA-Z_]+)')
-RE_CF_URL = re.compile(r'.*codeforces\.com/problemset/problem/(\d+)/([a-zA-Z])')
-RE_CF_GYM_URL = re.compile(r'.*codeforces\.com/gym/(\d+)/problem/([a-zA-Z])')
+RE_CF_URL = re.compile(r'.*codeforces\.com/problemset/problem/(\d+)/' + RE_CF_PID)
+RE_CF_GYM_URL = re.compile(r'.*codeforces\.com/gym/(\d+)/problem/' + RE_CF_PID)
 RE_AT_URL = re.compile(r'.*atcoder\.jp/contests/a[brg]c\d{3}/tasks/(a[brg]c\d{3})_([1-9a-zA-Z])')
 
 RE_LUOGU_P_PROBLEM = re.compile(r'P(\d{4,})')
-RE_LUOGU_REMOTE_CF_PROBLEM = re.compile(r'CF(\d+)([a-zA-Z])')
+RE_LUOGU_REMOTE_CF_PROBLEM = re.compile(r'CF(\d+)' + RE_CF_PID)
 RE_LUOGU_REMOTE_AT_PROBLEM = re.compile(r'AT_(a[brg]c\d{3})_([1-9a-zA-Z])')
 
 class OJType(Enum):
@@ -83,15 +84,12 @@ def parse_luogu_pid(pid: str) -> Optional[ProblemInfo]:
     return None
 
 def parse_cf_pid(contest: str, pid: str) -> Optional[ProblemInfo]:
-    assert(len(pid) == 1)
     return ProblemInfo(OJType.Codeforces, pid, contest=contest)
 
 def parse_cf_gym_pid(contest: str, pid: str) -> Optional[ProblemInfo]:
-    assert(len(pid) == 1)
     return ProblemInfo(OJType.CodeforcesGym, pid, contest=contest)
 
 def parse_at_pid(contest: str, pid: str) -> Optional[ProblemInfo]:
-    assert(len(pid) == 1)
     raw_id = pid if pid.isalpha() else chr(int(pid) - 1 + ord('a')) # arc001_1
     return ProblemInfo(OJType.Atcoder, raw_id, contest=contest)
 
@@ -134,11 +132,13 @@ def test():
         'https://uoj.ac/problem/1': 'uoj_p1',
         'https://www.luogu.com.cn/problem/P1001': 'luogu_p1001',
         'https://codeforces.com/problemset/problem/1/A': 'cf_1_a',
+        'https://codeforces.com/problemset/problem/1450/C2': 'cf_1450_c2',
         'https://codeforces.com/gym/100001/problem/A': 'cf_gym_100001_a',
         'https://atcoder.jp/contests/arc001/tasks/arc001_1': 'at_arc001_a',
         'https://atcoder.jp/contests/arc058/tasks/arc058_a': 'at_arc058_a',
         # Luogu RemoteJudge
         'https://www.luogu.com.cn/problem/CF1A': 'cf_1_a',
+        'https://www.luogu.com.cn/problem/CF1450C2': 'cf_1450_c2',
         'https://www.luogu.com.cn/problem/AT_arc058_a': 'at_arc058_a',
     }
     for (url, filename) in urls.items():
