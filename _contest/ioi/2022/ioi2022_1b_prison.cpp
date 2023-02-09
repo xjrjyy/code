@@ -1,4 +1,4 @@
-/* ioi2022_1b_rarest_insects.cpp */
+/* ioi2022_1b_prison.cpp */
 #include <bits/stdc++.h>
 
 #define fo(x) freopen(#x".in", "r", stdin); freopen(#x".out", "w", stdout);
@@ -12,6 +12,8 @@
 
 using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
+
+#include "prison.h"
 
 std::vector<std::vector<int>> devise_strategy(int n) {
     vec<vec<int>> A;
