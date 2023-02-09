@@ -155,3 +155,30 @@ private:
     vec<U> d; vec<int> h; vec<bool> vs;
 };
 ```
+
+## 优化
+
+### Perf
+
+```cpp
+using namespace std::chrono;
+struct Perf {
+    std::string msg; steady_clock::time_point st;
+    Perf(const std::string &msg_) : msg(msg_), st(steady_clock::now()) {}
+    ~Perf() {
+        static std::map<std::string, nanoseconds> *M = nullptr;
+        if (M == nullptr) M = new std::map<std::string, nanoseconds>();
+        steady_clock::time_point ed = steady_clock::now();
+        auto t = duration_cast<nanoseconds>(ed - st);
+        (*M)[msg] += t;
+        if (msg == "ALL") {
+            for (const auto &p : *M) {
+                auto t = duration_cast<milliseconds>(p.second);
+                std::cerr << p.first << ": " << t.count() << "ms\n";
+            }
+            delete M;
+        }
+    }
+} _perf_print("ALL");
+#define PERF() Perf _perf(__FUNCTION__)
+```
