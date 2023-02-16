@@ -36,6 +36,8 @@
   - 例：`coci2022_1a_desni_klik`。
 
 - 由于集训队互测不知道怎么翻译，暂时定为 CCTMT（China Candidate Team Mutual Training）。
+- 联合省选命名为 UPTS：
+  - 六省联考 2017。
 
 一些细节：
 
