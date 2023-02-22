@@ -1,4 +1,4 @@
-/* sdoi2013_forest.cpp */
+/* sdoi2013_r1_1b_forest.cpp */
 #include <bits/stdc++.h>
 
 #define fo(x) freopen(#x".in", "r", stdin); freopen(#x".out", "w", stdout);
