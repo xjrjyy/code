@@ -31,7 +31,7 @@ struct Edge { int u, v, w; };
 bool operator<(const Edge &x, const Edge &y) { return x.w < y.w; }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     vec<Node> a(n);
     r0p (i, n) cin >> a[i].x >> a[i].y >> a[i].z, a[i].i = i;

@@ -70,7 +70,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m; cin >> n >> m;
     CostNetFlow<int, int> nf(n + m + 2); int s = n + m, t = s + 1;
     r0p (i, n) { int x; cin >> x; nf.adde(s, i, x, 0); }

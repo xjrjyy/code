@@ -35,7 +35,7 @@ void init(int n) {
 int C(int n, int m) { return n < m ? 0 : 1ll * fac[n] * ifac[m] % mod * ifac[n - m] % mod; }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     init(maxn - 5);
     int T; cin >> T;
     while (T--) {

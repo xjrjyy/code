@@ -70,7 +70,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     const vec<int> Dx = {-1, 1, 0, 0};
     const vec<int> Dy = {0, 0, -1, 1};
     int n, m, p, q, r; cin >> n >> m >> p >> q >> r, ++m;

@@ -19,7 +19,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     
     // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
     return 0;

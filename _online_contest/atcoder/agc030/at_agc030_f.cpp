@@ -24,7 +24,7 @@ void norm(int &x) {
 int n, m, a[maxn], b[maxn], c[maxn], vs[maxn], f[maxn][maxn], g[maxn][maxn];
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n;
     rep (i, 1, 2 * n) cin >> a[i];
     rep (i, 1, n) if (~a[i * 2 - 1] && ~a[i * 2]) b[a[i * 2 - 1]] = b[a[i * 2]] = 1;

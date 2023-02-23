@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     string s; cin >> s;
     int n = int(s.size());
     vec<ll> f(11), g(11); ll A = 0;

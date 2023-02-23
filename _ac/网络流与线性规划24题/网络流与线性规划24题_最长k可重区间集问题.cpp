@@ -72,7 +72,7 @@ private:
 struct node { int l, r; };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, k; cin >> n >> k;
     vec<node> a(n); vec<int> b{-1};
     each (x, a) {

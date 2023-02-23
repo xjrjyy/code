@@ -24,7 +24,7 @@ void norm(int &x) {
 int n, s, t, f[maxn][maxn];
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> s >> t;
     f[0][0] = 1;
     rep (i, 1, n) rep (j, 1, i) {

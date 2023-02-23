@@ -16,7 +16,7 @@ template <class T> using vec = std::vector<T>; using namespace std;
 mt19937 rnd(time(0));
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n; const int m = 1 << 11, K = 20;
     vec<int> q(n); iota(all(q), 0), shuffle(all(q), rnd);
     auto rdf = [&](int x) {

@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n = 52, m; cin >> m;
     auto id = [&](char c) -> int { return isupper(c) ? c - 'A' : c - 'a' + 26; };
     auto nam = [&](int x) -> char { return x < 26 ? x + 'A' : x - 26 + 'a'; };

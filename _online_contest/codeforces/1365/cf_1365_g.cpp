@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n; const int m = 13, k = m / 2;
     vec<int> Q;
     r0p (i, (1 << m) - 1) if (__builtin_popcount(i) == k) Q.push_back(i);

@@ -36,7 +36,7 @@ void dfs2(int u, int fa) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n;
     rep (i, 1, n - 1) {
         int u, v; double w; cin >> u >> v >> w, w /= 100;

@@ -60,7 +60,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     const vec<int> Dx = {-2, -2, -1, -1, 1, 1, 2, 2};
     const vec<int> Dy = {-1, 1, -2, 2, -2, 2, -1, 1};
     int n, q; cin >> n >> q;

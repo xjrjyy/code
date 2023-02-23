@@ -18,7 +18,7 @@ const int maxn = 5e2 + 5;
 int n, m, f[maxn], a[maxn][maxn][maxn];
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m, a[1][1][1] = 1;
     rep (i, 2, n) {
         rep (j, 1, i) rep (k, 1, i) {

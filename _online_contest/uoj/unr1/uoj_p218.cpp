@@ -62,7 +62,7 @@ int qry(int u, int l, int r, int p) {
 int n, m, typ, a[maxm], A;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> typ, sgt.bld(1, 1, n);
     auto rd = [&](int &x) { cin >> x, x = (x + A * typ) % n + 1; };
     rep (i, 1, m) {

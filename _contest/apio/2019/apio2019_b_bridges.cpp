@@ -34,7 +34,7 @@ struct DSU {
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, T; cin >> n >> m, T = sqrt(m * log2(m) / log2(n + 1)), T = max(T, 1);
     vec<edge> E(m);
     r0p (i, m) cin >> E[i].u >> E[i].v >> E[i].w, --E[i].u, --E[i].v, E[i].i = i;

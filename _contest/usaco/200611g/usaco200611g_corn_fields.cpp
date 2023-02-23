@@ -22,7 +22,7 @@ void norm(int &x) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, U; cin >> n >> m, U = 1 << m;
     vec<int> a(n);
     r0p (i, n) r0p (j, m) { int x; cin >> x; a[i] |= (!x << j); }

@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     const double eps = 1e-8;
     int n, m, q; cin >> n >> m >> q;
     vec<double> a(n + 1), b(n + 1);

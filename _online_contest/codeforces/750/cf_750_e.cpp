@@ -59,7 +59,7 @@ struct SegTree {
 int n, q; string s;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> q >> s;
     rep (i, 1, n) {
         char c = s[i - 1]; Mat &F = f[i]; F = Mat::I();

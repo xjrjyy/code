@@ -41,7 +41,7 @@ int gid(int x, int y) { return (x - 1) * N + y; }
 int d[maxN * maxN]; queue<int> Q;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m >> q;
     r0p (_, m) { int x, y; cin >> x >> y, a[x][y] = 1; }
     rep (i, 1, n) a[0][i] = a[i][0] = a[n + 1][i] = a[i][n + 1] = 1;

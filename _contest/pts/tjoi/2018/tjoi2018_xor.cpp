@@ -73,7 +73,7 @@ int qry(Node *u, Node *v, int x) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> q;
     null = new Node(nullptr, nullptr, 0), null->ch[0] = null->ch[1] = null;
     rt[0] = rt2[0] = null;

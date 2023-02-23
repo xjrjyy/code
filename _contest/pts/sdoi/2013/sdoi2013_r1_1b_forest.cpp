@@ -80,7 +80,7 @@ void prt(Node *u, int l, int r) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> typ >> n >> m >> q, w = ceil(log2(n));
     rt[0] = null->ls = null->rs = null;
     rep (i, 1, n) cin >> a[i], b[i] = {a[i], i};

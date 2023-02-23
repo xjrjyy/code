@@ -110,7 +110,7 @@ void prt(int u) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     init(), null = new Node();
     cin >> n >> m;
     rep (i, 1, m) {

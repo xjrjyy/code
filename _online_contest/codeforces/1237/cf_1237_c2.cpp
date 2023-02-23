@@ -22,7 +22,7 @@ struct node {
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     vec<node> a(n); vec<int> b;
     r0p (i, n) cin >> a[i].x >> a[i].y >> a[i].z, a[i].i = i;

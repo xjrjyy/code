@@ -17,7 +17,7 @@ ll gcd(ll x, ll y) { return y ? gcd(y, x % y) : x; }
 ll lcm(ll x, ll y) { return x / gcd(x, y) * y; }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     vec<ll> a(n); each (x, a) cin >> x;
     auto chk = [&](const vec<ll> &t, ll x) {

@@ -43,7 +43,7 @@ int Lag(int x, int *f, int n) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int x, y = 1;
     cin >> x >> n >> mod;
     rep (i, 0, 2 * n) f[0][i] = 1;

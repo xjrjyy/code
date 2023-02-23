@@ -39,7 +39,7 @@ void power(Mat a, int b, Vec &c) {
 
 int main() {
     const int inf = ~0u >> 2;
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int m; cin >> n >> m;
     vec<edge> E(m); each (e, E) cin >> e.u >> e.v >> e.w, --e.u, --e.v;
     sort(all(E));

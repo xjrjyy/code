@@ -31,7 +31,7 @@ void solve() {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int T; cin >> T;
     while (T--) solve();
     // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";

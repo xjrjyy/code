@@ -72,7 +72,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, k; cin >> n >> m >> k, n += 2;
     const int r = n, T = (n - 1 + k) * r;
     const int inf = ~0u >> 2;

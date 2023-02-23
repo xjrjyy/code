@@ -60,7 +60,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     const int N = 2000;
     vec<int> vs(2 * N);
     r0p (i, 2 * N) if (i * i < 2 * N) vs[i * i] = 1;

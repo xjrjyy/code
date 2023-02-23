@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, N, m, k, q; cin >> n >> m >> k, N = ceil(log2(n)) + 1, q = (k + 1) / 2;
     vec<vec<int>> G(n);
     r0p (_, m) {

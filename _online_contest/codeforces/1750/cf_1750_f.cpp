@@ -18,7 +18,7 @@ const int maxn = 5e3 + 5;
 int f[maxn], g[maxn][2 * maxn][2], h[maxn][2 * maxn], s[2 * maxn][maxn];
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, mod; cin >> n >> mod;
     if (n == 1) return cout << 1 << '\n', 0;
     auto norm = [&](int &x) {

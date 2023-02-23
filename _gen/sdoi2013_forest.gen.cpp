@@ -26,7 +26,7 @@ int dfs(int u, int fa, int w) {
 }
 
 int main(int argc, char *argv[]) {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     assert(argc >= 2);
     rnd.seed(atoi(argv[1]));
     cout << 0 << endl << n << " 0 " << q << endl;

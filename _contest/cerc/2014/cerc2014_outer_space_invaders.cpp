@@ -17,7 +17,7 @@ const int inf = ~0u >> 2;
 struct node { int l, r, d; };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int t; cin >> t;
     while (t--) {
         int n; cin >> n;

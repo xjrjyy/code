@@ -26,7 +26,7 @@ void rnd_is(int &x, int &y, int t) {
 int main(int argc, char *argv[]) {
     assert(argc >= 2);
     rnd.seed(atoi(argv[1]));
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cout << n << ' ' << m << ' ' << q << '\n';
 	r0p (_, m) {
 		int x, y;

@@ -16,7 +16,7 @@ template <class T> using vec = std::vector<T>; using namespace std;
 struct opt { int w, c; };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     const ll inf = ~0ull >> 2;
     int T; cin >> T;
     while (T--) {

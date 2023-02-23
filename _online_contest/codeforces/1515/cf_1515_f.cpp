@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, x; cin >> n >> m >> x;
     vec<ll> a(n); each (x, a) cin >> x;
     if (accumulate(all(a), 0ll) < ll(n - 1) * x) return cout << "NO\n", 0;

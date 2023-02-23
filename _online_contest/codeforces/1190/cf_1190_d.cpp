@@ -51,7 +51,7 @@ struct DS {
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     vec<node> a(n); vec<int> b;
     each (x, a) cin >> x.x >> x.y, b.push_back(x.x);

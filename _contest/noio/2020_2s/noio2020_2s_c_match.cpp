@@ -55,7 +55,7 @@ void dfs(int u, int fa) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> str, init(n / 2);
     rep (i, 1, n) a[i] = str[i - 1] - '0';
     rep (i, 1, n - 1) {

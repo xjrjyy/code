@@ -60,7 +60,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, k = 0; cin >> n >> m;
     vec<int> a(n); each (x, a) cin >> x, k += x;
     vec<int> b(m); each (x, b) cin >> x;

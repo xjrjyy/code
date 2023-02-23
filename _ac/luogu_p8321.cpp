@@ -26,7 +26,7 @@ int qpow(int a, int b) {
 int inv(int x) { return qpow(x, mod - 2); }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     vec<int> a(n); each (x, a) cin >> x;
     vec<int> b(n); each (x, b) cin >> x;

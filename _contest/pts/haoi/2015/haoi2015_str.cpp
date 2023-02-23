@@ -57,7 +57,7 @@ Mat T[maxn][10], t;
 Mat f[maxn];
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> (s + 1) >> m, n = strlen(s + 1);
     rep (i, 0, n) T[i][0] = Mat::I();
     r0p (i, m) T[1][1][i + 1][i] = T[1][1][i][m - 1] = 1;

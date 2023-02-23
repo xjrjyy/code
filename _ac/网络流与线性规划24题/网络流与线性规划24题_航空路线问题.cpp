@@ -70,7 +70,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m; cin >> n >> m;
     vec<string> a(n); map<string, int> b;
     r0p (i, n) cin >> a[i], b[a[i]] = i;

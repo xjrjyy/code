@@ -16,7 +16,7 @@ template <class T> using vec = std::vector<T>; using namespace std;
 struct opt { int p, v; };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m = 0, q; cin >> n >> q; const int B = sqrt(n) + 2;
     vec<int> a(n); each (x, a) cin >> x, m = max(m, x), --x;
     vec<vec<int>> b(m); vec<vec<opt>> s(m);

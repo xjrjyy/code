@@ -45,7 +45,7 @@ template <typename T> T eud(ll p, ll r, ll q, ll l, const T &U, const T &R) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int T; cin >> T;
     while (T--) {
         ll n, p, r, q; cin >> n >> p >> r >> q;

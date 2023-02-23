@@ -37,7 +37,7 @@ int C(int n, int m) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m; cin >> n >> m, init(max(2 * n, m + 1));
     int A = (n == m);
     rep (i, 0, m) rep (j, 0, m)

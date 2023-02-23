@@ -32,7 +32,7 @@ void init(int n) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     init(maxn - 5);
     int q; cin >> q;
     rep (_, 1, q) {

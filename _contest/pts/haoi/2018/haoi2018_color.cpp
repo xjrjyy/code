@@ -57,7 +57,7 @@ void NTT(int *f, int n, int rev) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     init(maxn - 5);
     cin >> n >> m >> k, N = 1, M = min(m, n / k) + 1;
     rep (i, 0, m) cin >> a[i];

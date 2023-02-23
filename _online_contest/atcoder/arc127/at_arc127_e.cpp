@@ -20,7 +20,7 @@ void norm(int &x) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, k = 0; cin >> n >> m;
     vec<int> a;
     r0p (_, n + m) {

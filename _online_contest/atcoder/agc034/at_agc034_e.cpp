@@ -16,7 +16,7 @@ template <class T> using vec = std::vector<T>; using namespace std;
 const int inf = ~0u >> 2;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     string s; cin >> s;
     vec<vec<int>> G(n);

@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n = 0, q; cin >> q; const int m = 32;
     vec<int> A(m); vec<ll> s(m); vec<multiset<int>> t(m);
     auto gps = [&](int x) {

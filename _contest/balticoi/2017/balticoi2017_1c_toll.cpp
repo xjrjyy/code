@@ -59,7 +59,7 @@ struct SegTree {
 } sgt;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m, q; cin >> N >> n >> m >> q;
     r0p (_, m) {
         int u, v, w; cin >> u >> v >> w;

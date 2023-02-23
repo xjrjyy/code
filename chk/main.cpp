@@ -95,7 +95,7 @@ void run_testcase(int id, int &res) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     system("taskkill /im gen.exe /f");
     system("taskkill /im usr.exe /f");
     system("taskkill /im std.exe /f");

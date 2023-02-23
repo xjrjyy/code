@@ -39,7 +39,7 @@ void dfs(int u, int fa, int S) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> q >> s, --s, m = 1 << n;
     rep (i, 1, n - 1) {
         int u, v; cin >> u >> v, --u, --v;

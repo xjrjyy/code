@@ -51,7 +51,7 @@ void solve(int l, int r, int L, int R) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
     rep (i, 1, n) cin >> a[i], b[a[i]].push_back(i);
     rep (i, 1, m) cin >> Q[i].l >> Q[i].r, Q[i].i = i;

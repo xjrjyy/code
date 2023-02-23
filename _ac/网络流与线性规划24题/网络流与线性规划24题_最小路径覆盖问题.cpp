@@ -60,7 +60,7 @@ private:
 };
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n, m; cin >> n >> m;
     NetFlow<int> nf(2 * n + 2); int s = 2 * n, t = s + 1;
     r0p (_, m) { int u, v; cin >> u >> v, --u, --v, nf.adde(u, v + n, 1); }

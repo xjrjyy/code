@@ -17,7 +17,7 @@ mt19937 rnd;
 struct edge { int u, v, w; };
 
 int main(int argc, char *argv[]) {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     assert(argc >= 2);
     rnd.seed(atoi(argv[1]));
     int n = 5, m = 7, q = 4;

@@ -48,7 +48,7 @@ int qry(int l, int r, int L, int R, int k) {
 }
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     cin >> n >> m;
     rep (i, 1, n) cin >> a[i];
     rep (i, 1, m) cin >> b[i], bld(rt[i], rt[i - 1], b[i], w);

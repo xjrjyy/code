@@ -14,7 +14,7 @@ using ll = long long; using ull = unsigned long long;
 template <class T> using vec = std::vector<T>; using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+    cin.tie(nullptr)->sync_with_stdio(false);
     int n; cin >> n;
     cout << fixed << setprecision(10) << double(n) * (n + 1) / (double(2 * n - 1) * 2) << "\n";
     // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
