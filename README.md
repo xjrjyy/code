@@ -80,6 +80,8 @@
 
 常见比赛见 [Category](http://qoj.ac/category/)。
 
+- [Baltic Olympiad in Informatics Archive](https://boi.cses.fi/tasks.php)。
+
 ## 代码
 
 所有代码均不保留文件输入输出。
