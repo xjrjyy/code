@@ -84,6 +84,18 @@ struct DSU {
 };
 ```
 
+### 树状数组
+
+```cpp
+template <typename T> struct BIT {
+    int n; vec<T> t;
+    BIT(int n_) : n(n_), t(n + 1) {}
+    void add(int p, const T &x) { for (; p <= n; p += p & -p) t[p] += x; }
+    T qry(int p) { T x; for (; p; p -= p & -p) { x += t[p]; } return x; }
+    T range(int l, int r) { return qry(r) - qry(l - 1); }
+};
+```
+
 ## 图论
 
 ### 网络流
