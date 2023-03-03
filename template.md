@@ -13,18 +13,58 @@
 #define p0r(i, l) per (i, (l) - 1, 0)
 #define each(x, s) for (auto &x : (s))
 #define all(s) (s).begin(), (s).end()
-#define dbg(x) (cerr << "Line#" << __LINE__ << " " << #x << "=" << (x) << endl)
+#define dbg(x) (std::cerr << "Line#" << __LINE__ << " " << #x << "=" << (x) << std::endl)
 
 using ll = long long; using ull = unsigned long long;
-template <class T> using vec = std::vector<T>; using namespace std;
+template <class T> using vec = std::vector<T>;
 
 int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
+    std::cin.tie(nullptr)->sync_with_stdio(false);
     
-    // cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
+    // std::cerr << "\n" << double(clock()) / CLOCKS_PER_SEC << "s\n";
     return 0;
 }
 
+```
+
+```cpp
+const int P = 1e9 + 7;
+
+int fix(int x) {
+    assert(-P <= x && x < 2 * P);
+    if (x < 0) x += P;
+    if (x >= P) x -= P;
+    return x;
+}
+template<class T> T power(T a, ll b) {
+    T c = 1; for (; b; b /= 2, a *= a) if (b & 1) c *= a;
+    return c;
+}
+struct Z {
+    int x;
+    Z(int x = 0) : x(fix(x)) {}
+    Z(ll x) : x(fix(x % P)) {}
+    int val() const { return x; }
+    Z operator-() const { return Z(fix(P - x)); }
+    Z inv() const {
+        assert(x != 0);
+        return power(*this, P - 2);
+    }
+    Z &operator*=(const Z &rhs) { return x = 1ll * x * rhs.x % P, *this; }
+    Z &operator+=(const Z &rhs) { return x = fix(x + rhs.x), *this; }
+    Z &operator-=(const Z &rhs) { return x = fix(x - rhs.x), *this; }
+    Z &operator/=(const Z &rhs) { return *this *= rhs.inv(); }
+    friend Z operator*(const Z &lhs, const Z &rhs) { Z res = lhs; return res *= rhs; }
+    friend Z operator+(const Z &lhs, const Z &rhs) { Z res = lhs; return res += rhs; }
+    friend Z operator-(const Z &lhs, const Z &rhs) { Z res = lhs; return res -= rhs; }
+    friend Z operator/(const Z &lhs, const Z &rhs) { Z res = lhs; return res /= rhs; }
+    friend std::istream &operator>>(std::istream &in, Z &a) {
+        ll v; return in >> v, a = Z(v), in;
+    }
+    friend std::ostream &operator<<(std::ostream &os, const Z &a) {
+        return os << a.val();
+    }
+};
 ```
 
 ## 数据结构
