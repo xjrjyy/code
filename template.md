@@ -36,7 +36,7 @@ int fix(int x) {
     if (x >= P) x -= P;
     return x;
 }
-template<class T> T power(T a, ll b) {
+template <class T> T power(T a, ll b) {
     T c = 1; for (; b; b /= 2, a *= a) if (b & 1) c *= a;
     return c;
 }
