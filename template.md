@@ -74,11 +74,11 @@ struct Z {
 ```cpp
 struct DSU {
     int n; vec<int> fa, sz;
-    DSU(int n_) : n(n_), fa(n), sz(n, 1) { iota(all(fa), 0); }
+    DSU(int n_) : n(n_), fa(n), sz(n, 1) { std::iota(all(fa), 0); }
     int fd(int x) { return x == fa[x] ? x : fa[x] = fd(fa[x]); }
     void mg(int u, int v) {
         if ((u = fd(u)) == (v = fd(v))) return;
-        if (sz[u] < sz[v]) swap(u, v);
+        if (sz[u] < sz[v]) std::swap(u, v);
         fa[v] = u, sz[u] += sz[v];
     }
 };
